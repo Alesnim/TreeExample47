@@ -23,6 +23,7 @@ public class Main {
 
 
         BinaryTree treeBinary = BinaryTree.createRandomIntegerTree(10);
+        System.out.println(treeBinary.depthFirstSearch(4));
         BinaryTree.drawTree(treeBinary);
 
     }

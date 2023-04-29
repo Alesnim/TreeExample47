@@ -63,6 +63,21 @@ public class BinaryTree {
     }
 
 
+    public boolean depthFirstSearch(int value) {
+        if (this.idata == value) {
+            return true;
+        }
+        boolean found = false;
+        if (this.left != null) {
+            found = this.left.depthFirstSearch(value);
+        }
+        if (!found && this.right != null) {
+            found = this.right.depthFirstSearch(value);
+        }
+        return found;
+    }
+
+
     /************ Actual functions that print the tree like a tree ********************/
     static void drawTree(BinaryTree root)
     {
